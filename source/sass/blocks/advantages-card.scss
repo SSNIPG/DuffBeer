@@ -1,8 +1,7 @@
-.advantages-card,
-.swiper-slide {
+.advantages-card {
   display: flex;
   flex-direction: column;
-  width: 31.5%;
+  width: 100%;
 
   @include vp-960 {
     max-width: 260px;

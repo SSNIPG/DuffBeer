@@ -133,7 +133,7 @@
       margin-bottom: 20px;
       text-transform: uppercase;
 
-      @include vp-960 {
+      @include vp-640 {
         margin-bottom: 15px;
         font-size: 18px;
         line-height: 32px;

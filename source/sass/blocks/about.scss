@@ -203,6 +203,14 @@
       line-height: 30px;
       color: $color-soya-bean;
 
+      br {
+        display: none;
+
+        @include vp-640 {
+          display: block;
+        }
+      }
+
       @include vp-640 {
         font-size: 14px;
         line-height: 20px;
