@@ -1,0 +1,21 @@
+.pagination {
+  display: flex;
+  column-gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__button,
+  &__global-button,
+  .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(138, 123, 96, 0.33);
+    border-radius: 50%;
+  }
+
+  &__button--current,
+  .swiper-pagination-bullet-active {
+    background-color: #0a3b93;
+  }
+}

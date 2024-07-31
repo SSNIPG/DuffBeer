@@ -1,0 +1,112 @@
+.hero {
+  background-color: $color-default-black;
+  background-image: linear-gradient(rgba(138, 123, 96, 0.67), rgba(138, 123, 96, 0.67)), url("/img/hero-bg-l.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include vp-960 {
+    background-image: linear-gradient(rgba(138, 123, 96, 0.67), rgba(138, 123, 96, 0.67)), url("/img/hero-bg-m.jpg");
+  }
+
+  @include vp-640 {
+    background-image: linear-gradient(rgba(138, 123, 96, 0.67), rgba(138, 123, 96, 0.67)), url("/img/hero-bg-s.jpg");
+  }
+
+  @include vp-320 {
+    background-image: linear-gradient(rgba(138, 123, 96, 0.67), rgba(138, 123, 96, 0.67)), url("/img/hero-bg-xs.jpg");
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px 60px;
+    min-height: 599px;
+
+    @include vp-960 {
+      padding: 0 40px 40px;
+    }
+
+    @include vp-640 {
+      min-height: 314px;
+    }
+
+    @include vp-320 {
+      min-height: 352px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__logo {
+    width: 267px;
+    height: 103px;
+    padding: 40px 13px;
+    margin-bottom: 116px;
+    background-color: $color-smalt;
+
+    @include vp-960 {
+      margin-left: 20px;
+      margin-bottom: 135px;
+    }
+
+    @include vp-640 {
+      width: 167px;
+      height: 64px;
+      margin: 0 auto;
+      margin-bottom: 55px;
+      padding: 23px 8px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    color: $color-default-white;
+
+    @include vp-960 {
+      row-gap: 28px;
+    }
+
+    @include vp-640 {
+      row-gap: 21px;
+      padding: 0 90px;
+      text-align: center;
+    }
+
+    @include vp-479 {
+      padding: 0;
+    }
+  }
+
+  &__company {
+    font-size: 72px;
+    line-height: 80px;
+    text-transform: uppercase;
+
+    @include vp-640 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @include vp-320 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &__description {
+    width: 550px;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    line-height: 36px;
+
+    @include vp-640 {
+      width: auto;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

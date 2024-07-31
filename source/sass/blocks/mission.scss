@@ -1,0 +1,270 @@
+.mission {
+  .container {
+    @include vp-960 {
+      box-shadow: 0 -18px $color-linen;
+    }
+
+    @include vp-640 {
+      box-shadow: none;
+    }
+  }
+
+  &__statistics {
+    position: relative;
+    padding: 94px 145px;
+    background-color: #0a3b93;
+
+    @include vp-960 {
+      padding-left: 125px;
+      padding-right: 125px;
+    }
+
+    @include vp-640 {
+      padding: 33px 108px 31px 69px;
+    }
+
+    @include vp-479 {
+      padding-left: 55px;
+      padding-right: 40px;
+    }
+
+    @include vp-320 {
+      padding: 32px 20px 32px 43px;
+    }
+
+    &::before {
+      position: absolute;
+      left: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 47px;
+      height: 60px;
+      background-image: url("/img/double-arrow.svg");
+      background-repeat: no-repeat;
+
+      @include vp-960 {
+        left: 40px;
+      }
+
+      @include vp-640 {
+        left: 20px;
+        width: 22px;
+        height: 28px;
+        background-size: cover;
+      }
+
+      @include vp-320 {
+        top: 34px;
+        transform: translateY(0);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: -6px;
+      bottom: 0;
+      content: "";
+      width: 437px;
+      height: 173px;
+      background-image: url("/img/mission-decor.svg");
+      background-repeat: no-repeat;
+
+      @include vp-960 {
+        right: 0;
+        width: 151px;
+        height: 176px;
+      }
+
+      @include vp-640 {
+        right: -2px;
+        width: 179px;
+        height: 97px;
+        background-image: url("/img/mission-decor-s.svg");
+      }
+    }
+
+    p {
+      position: relative;
+      width: 100%;
+      max-width: 676px;
+      margin: 0;
+      font-size: 24px;
+      line-height: 32px;
+      color: $color-default-white;
+      z-index: 1;
+
+      @include vp-640 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__purpose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 25px 101px;
+    text-transform: uppercase;
+    background-color: $color-default-black;
+    background-image: linear-gradient(rgba(138, 123, 96, 0.42), rgba(138, 123, 96, 0.42)), url("/img/mission-bg-l.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-default-white;
+
+    @include vp-960 {
+      padding-top: 84px;
+      background-image: linear-gradient(rgba(138, 123, 96, 0.42), rgba(138, 123, 96, 0.42)), url("/img/mission-bg-m.jpg");
+    }
+
+    @include vp-740 {
+      padding-top: 60px;
+      padding-bottom: 85px;
+    }
+
+    @include vp-640 {
+      padding-top: 55px;
+      padding-bottom: 55px;
+      background-position: center;
+    }
+
+    @include vp-320 {
+      padding: 27px 16px 60px 14px;
+    }
+
+    span {
+      position: relative;
+      margin-bottom: 40px;
+      padding: 0 78px;
+      font-size: 48px;
+      line-height: 80px;
+
+      @include vp-960 {
+        margin-bottom: 32px;
+      }
+
+      @include vp-740 {
+        line-height: 60px;
+        text-align: center;
+      }
+
+      @include vp-640 {
+        margin-bottom: 21px;
+        padding: 0 30px;
+        font-size: 30px;
+        line-height: 46px;
+      }
+
+      @include vp-479 {
+        line-height: 36px;
+      }
+
+      @include vp-320 {
+        margin-bottom: 4px;
+        font-size: 18px;
+        line-height: 46px;
+      }
+
+      &::before {
+        position: absolute;
+        left: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 66px;
+        height: 3px;
+        background-color: $color-default-white;
+
+        @include vp-740 {
+          left: 75px;
+        }
+
+        @include vp-640 {
+          left: 8px;
+          width: 15px;
+          height: 1px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 66px;
+        height: 3px;
+        background-color: $color-default-white;
+
+        @include vp-740 {
+          right: 75px;
+        }
+
+        @include vp-640 {
+          right: 8px;
+          width: 15px;
+          height: 1px;
+        }
+
+        @include vp-320 {
+          right: 0;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 40px;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+
+      br {
+        display: none;
+
+        @include vp-960 {
+          display: inline-block;
+        }
+      }
+
+      @include vp-960 {
+        margin-bottom: 32px;
+        line-height: 32px;
+      }
+
+      @include vp-640 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @include vp-320 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 283px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+    color: #0a3b93;
+    background-color: $color-default-white;
+
+    @include vp-640 {
+      width: 171px;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    @include vp-320 {
+      width: 197px;
+      font-size: 18px;
+    }
+  }
+}

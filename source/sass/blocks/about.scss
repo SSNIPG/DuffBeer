@@ -1,0 +1,256 @@
+.about {
+  padding: 100px 60px 99px;
+  border-right: 3px solid $color-linen;
+
+  @include vp-960 {
+    padding: 80px 41px 75px;
+    border-right: none;
+  }
+
+  @include vp-640 {
+    padding: 60px 20px;
+  }
+
+  @include vp-320 {
+    padding: 50px 16px 50px 14px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+
+    @include vp-960 {
+      column-gap: 27px;
+    }
+
+    @include vp-864 {
+      flex-direction: column-reverse;
+      column-gap: 0;
+      row-gap: 5px;
+    }
+
+    @include vp-640 {
+      row-gap: 39px;
+    }
+
+    @include vp-320 {
+      row-gap: 19px;
+    }
+  }
+
+  &__video-container {
+    width: 545px;
+    padding-top: 37px;
+    flex-shrink: 0;
+
+    @include vp-1024 {
+      width: 405px;
+    }
+
+    @include vp-960 {
+      padding-top: 60px;
+    }
+
+    @include vp-864 {
+      align-self: center;
+    }
+
+    @include vp-640 {
+      width: 542px;
+      height: 361px;
+      padding-top: 0;
+      align-self: flex-end;
+    }
+
+    @include vp-620 {
+      width: 405px;
+      height: 271px;
+      align-self: center;
+    }
+
+    @include vp-479 {
+      width: 260px;
+      height: 174px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    box-shadow: -35px -37px $color-linen;
+    height: 365px;
+
+    @include vp-1024 {
+      height: 271px;
+    }
+
+    @include vp-960 {
+      box-shadow: -41px -27px $color-linen;
+    }
+
+    @include vp-640 {
+      height: 361px;
+      box-shadow: none;
+    }
+
+    @include vp-620 {
+      height: 271px;
+    }
+
+    @include vp-479 {
+      width: 260px;
+      height: 174px;
+    }
+
+    &::before {
+      @include vp-640 {
+        position: absolute;
+        left: -28px;
+        top: -42px;
+        content: "";
+        width: 520px;
+        height: 382px;
+        background-color: $color-linen;
+        z-index: -1;
+
+        @include vp-620 {
+          width: 405px;
+          height: 271px;
+        }
+
+        @include vp-479 {
+          left: -14px;
+          top: -20px;
+          width: 260px;
+          height: 174px;
+        }
+      }
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+
+    img {
+      margin-bottom: 20px;
+
+      @include vp-640 {
+        width: 71px;
+        height: 31px;
+        margin-bottom: 13px;
+      }
+
+      @include vp-320 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0a3b93;
+
+    @include vp-640 {
+      margin-bottom: 19px;
+      font-size: 8px;
+      line-height: 8px;
+    }
+
+    @include vp-320 {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @include vp-960 {
+      row-gap: 17px;
+    }
+
+    @include vp-640 {
+      row-gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    @include vp-320 {
+      margin-bottom: 28px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 30px;
+      color: $color-soya-bean;
+
+      @include vp-640 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 231px;
+    top: 50%;
+    transform: translateY(-55%);
+    width: 68px;
+    height: 44px;
+    background-image: url("/img/play.svg");
+    background-repeat: no-repeat;
+    background-color: $color-transparent;
+    border: none;
+    cursor: pointer;
+
+    @include vp-1024 {
+      left: 172px;
+      transform: translateY(-47%);
+      width: 51px;
+      height: 36px;
+      background-size: 51px 33px;
+    }
+
+    @include vp-640 {
+      left: 230px;
+      transform: translateY(-55%);
+      width: 68px;
+      height: 44px;
+      background-size: cover;
+    }
+
+    @include vp-620 {
+      left: 172px;
+      transform: translateY(-52%);
+      width: 50px;
+      height: 35px;
+      background-size: cover;
+    }
+
+    @include vp-479 {
+      left: 111px;
+      width: 33px;
+      height: 22px;
+    }
+  }
+}

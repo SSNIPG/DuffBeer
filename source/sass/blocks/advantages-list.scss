@@ -1,0 +1,22 @@
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-960 {
+    row-gap: 20px;
+  }
+
+  @include vp-640 {
+    flex-wrap: nowrap;
+  }
+
+  .advantages-list__item,
+  .swiper-slide {
+    width: 31.5%;
+  }
+}

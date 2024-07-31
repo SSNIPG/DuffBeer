@@ -1,0 +1,89 @@
+.advantages-card,
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  width: 31.5%;
+
+  @include vp-960 {
+    max-width: 260px;
+  }
+
+  &--stability {
+    display: none;
+
+    @include vp-640 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 139px;
+    padding: 20px 20px 30px;
+    background-color: #0a3b93;
+
+    @include vp-960 {
+      min-height: 165px;
+    }
+
+    @include vp-640 {
+      min-height: 106px;
+      padding-top: 22px;
+      padding-bottom: 25px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-default-white;
+
+      @include vp-740 {
+        font-size: 15px;
+      }
+
+      @include vp-640 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &--stability {
+      br {
+        display: none;
+
+        @include vp-960 {
+          display: block;
+        }
+
+        @include vp-640 {
+          display: none;
+        }
+      }
+    }
+
+    &--creation {
+      padding-left: 23px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    align-self: flex-end;
+    width: 17px;
+    height: 17px;
+    background-image: url("/img/icon-plus.svg");
+    background-repeat: no-repeat;
+  }
+}

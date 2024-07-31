@@ -1,0 +1,253 @@
+.advantages {
+  padding: 100px 59px 120px 60px;
+  background-color: $color-linen;
+
+  @include vp-960 {
+    padding: 80px 40px 140px;
+  }
+
+  @include vp-640 {
+    padding: 60px 20px 69px;
+  }
+
+  @include vp-479 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @include vp-320 {
+    padding: 50px 16px 75px 14px;
+  }
+
+  &__title,
+  &__global span {
+    margin: 0;
+    margin-bottom: 60px;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 400;
+    color: #0a3b93;
+  }
+
+  &__title {
+    @include vp-960 {
+      margin-bottom: 32px;
+    }
+
+    @include vp-640 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  &__swiper {
+    @include vp-640 {
+      padding-right: 25px;
+    }
+
+    @include vp-479 {
+      width: 285px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include vp-350 {
+      width: 260px;
+    }
+
+    @include vp-320 {
+      padding: 0;
+    }
+  }
+
+  &__work {
+    margin-bottom: 125px;
+
+    @include vp-960 {
+      margin-bottom: 81px;
+    }
+
+    @include vp-640 {
+      position: relative;
+      margin-bottom: 56px;
+    }
+  }
+
+  .advantages__buttons {
+    display: none;
+
+    @include vp-640 {
+      position: absolute;
+      top: 138px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    position: absolute;
+
+    &--prev {
+      left: -20px;
+
+      @include vp-479 {
+        left: -10px;
+      }
+
+      @include vp-320 {
+        left: -14px;
+      }
+    }
+
+    &--next {
+      right: -17px;
+
+      @include vp-479 {
+        right: -10px;
+      }
+
+      @include vp-320 {
+        right: -16px;
+      }
+    }
+  }
+
+  .advantages__pagination {
+    display: none;
+
+    @include vp-640 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__global {
+    position: relative;
+
+    span {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+
+      @include vp-960 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 32px;
+      }
+
+      @include vp-320 {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 60px;
+      font-size: 18px;
+      line-height: 30px;
+      color: $color-soya-bean;
+
+      @include vp-960 {
+        margin-bottom: 32px;
+      }
+
+      @include vp-640 {
+        margin-bottom: 48px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @include vp-320 {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__global-swiper {
+    @include vp-640 {
+      padding-right: 25px;
+      margin-bottom: 8px;
+    }
+
+    @include vp-479 {
+      width: 285px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    @include vp-350 {
+      width: 260px;
+    }
+
+    @include vp-320 {
+      padding: 0;
+    }
+  }
+
+  .advantages__global-buttons {
+    display: none;
+
+    @include vp-640 {
+      position: absolute;
+      top: 258px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      display: flex;
+    }
+
+    @include vp-320 {
+      position: absolute;
+      top: 227px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  &__global-button {
+    position: absolute;
+
+    &--prev {
+      left: -20px;
+
+      @include vp-479 {
+        left: -10px;
+      }
+    }
+
+    &--next {
+      right: -12px;
+
+      @include vp-479 {
+        right: -10px;
+      }
+
+      @include vp-320 {
+        right: -16px;
+      }
+    }
+  }
+
+  .advantages__global-pagination {
+    display: none;
+
+    @include vp-640 {
+      display: flex;
+      justify-content: center;
+      height: 20px;
+      padding: 8px 0;
+
+      @include vp-320 {
+        justify-content: flex-start;
+        position: absolute;
+        top: -24px;
+      }
+    }
+  }
+}
